@@ -1,0 +1,80 @@
+# Translation for the E-mail Users plugin for Omeka.
+# This file is distributed under the same license as the Omeka plugin.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: E-mail Users\n"
+"Report-Msgid-Bugs-To: https://github.com/DBinaghi/plugin-EmailUsers/issues\n"
+"POT-Creation-Date: 2021-09-07 19:15-0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Daniele Binaghi <admin@bitoteko.it>\n"
+"Language-Team: Italian <LL@li.org>\n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: EmailUsersPlugin.php:135
+msgid "E-mail Users"
+msgstr "Contatta utenti"
+
+#: config_form.php:11
+msgid "E-mail composition"
+msgstr "Composizione e-mail"
+
+#: config_form.php:15
+msgid "Subject Prefix"
+msgstr "Prefisso Soggetto"
+
+#: config_form.php:19
+msgid "Text to be placed at the beginning of e-mail subject (optional; e.g.: site name)."
+msgstr "Testo da posizionare prima dell'oggetto della e-mail (opzionale; p.e.: nome del sito)."
+
+#: config_form.php:27
+msgid "Text Header"
+msgstr "Intestazione Testo"
+
+#: config_form.php:31
+msgid "Text to be placed before the beginning of e-mail body (optional)."
+msgstr "Testo da posizionare prima dell'inizio del corpo dell'e-mail (opzionale)."
+
+#: config_form.php:39
+msgid "Text Footer"
+msgstr "Pié di pagina Testo"
+
+#: config_form.php:43
+msgid "Text to be placed after the end of e-mail body (optional)."
+msgstr "Testo da posizione dopo la fine del corpo dell'e-mail (opzionale)."
+
+#: config_form.php:51
+msgid "Use HTML"
+msgstr "Usa HTML"
+
+#: config_form.php:55
+msgid "If checked, HTML code will be allowed for e-mail text."
+msgstr "Se selezionato, il codice HTML sarà ammesso nel testo dell'e-mail."
+
+#: IndexController.php:53
+msgid "A subject must be supplied for the e-mail."
+msgstr "Deve essere fornito un oggetto per l'e-mail."
+
+#: IndexController.php:56
+msgid "The e-mail subject must be no longer than 255 characters."
+msgstr "L'oggetto dell'e-mail non può essere più lungo di 255 caratteri."
+
+#: IndexController.php:60
+msgid "A text must be supplied for the e-mail."
+msgstr "Deve essere fornito un testo per l'e-mail."
+
+#: IndexController.php:63
+msgid "The e-mail text must be at least 10 characters long."
+msgstr "Il testo dell'e-mail deve essere lungo almeno 10 caratteri."
+
+#: IndexController.php:129
+msgid "The new e-mail was succesfully sent to one recipient."
+msgid_plural "The new e-mail was succesfully sent to %s recipients."
+msgstr[0] "La nuova e-mail è stata inviata con successo ad un destinatario."
+msgstr[1] "La nuova e-mail è stata inviata con sucesso a %s destinatari."

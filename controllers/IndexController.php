@@ -116,8 +116,7 @@ class EmailUsers_IndexController extends Omeka_Controller_AbstractActionControll
 
 			// Send message
 			foreach ($recipients as $recipient) {
-//				$email->addTo($recipient->email, $recipient->name);
-				$email->addTo('daniele.binaghi@libero.it', $recipient->name);
+				$email->addTo($recipient->email, $recipient->name);
 				$email->send();
 				$email->clearRecipients();
 			}

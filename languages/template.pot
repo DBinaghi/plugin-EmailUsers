@@ -73,7 +73,7 @@ msgstr ""
 msgid "The e-mail text must be at least 10 characters long."
 msgstr ""
 
-#: IndexController.php:129
+#: IndexController.php:133
 msgid "The new e-mail was succesfully sent to one recipient."
 msgid_plural "The new e-mail was succesfully sent to %s recipients."
 msgstr[0] ""
@@ -111,25 +111,38 @@ msgid "Recipients"
 msgstr ""
 
 #: browse.php:27
-msgid "Priority"
+msgid "Type"
 msgstr ""
 
 #: browse.php:28
+#: show.php:30
+msgid "Priority"
+msgstr ""
+
+#: browse.php:29
 msgid "Datetime sent"
 msgstr ""
 
-#: browse.php:52
+#: browse.php:53
+msgid "HTML"
+msgstr ""
+
+#: browse.php:53
+msgid "Text"
+msgstr ""
+
+#: browse.php:54
 #: send.php:33
 msgid "High"
 msgstr ""
 
-#: browse.php:52
+#: browse.php:54
 #: send.php:33
 msgid "Normal"
 msgstr ""
 
 #: send.php:4
-msgid "E-mail Users | Send a new e-mail"
+msgid "E-mail Users | Send new e-mail"
 msgstr ""
 
 #: send.php:39
@@ -160,7 +173,7 @@ msgid "Browse e-mail"
 msgstr ""
 
 #: show.php:7
-msgid "Here\'s e-mail message #%s."
+msgid "Here's e-mail message #%s."
 msgstr ""
 
 #: show.php:11
@@ -169,8 +182,4 @@ msgstr ""
 
 #: show.php:19
 msgid "Sent by"
-msgstr ""
-
-#: show.php:30
-msgid "Priority"
 msgstr ""

@@ -19,7 +19,7 @@ msgstr ""
 
 #: EmailUsersPlugin.php:135
 msgid "E-mail Users"
-msgstr "Contatta utenti"
+msgstr "E-mail utenti"
 
 #: config_form.php:11
 msgid "E-mail composition"
@@ -38,24 +38,24 @@ msgid "Text Header"
 msgstr "Intestazione Testo"
 
 #: config_form.php:31
-msgid "Text to be placed before the beginning of e-mail body (optional)."
-msgstr "Testo da posizionare prima dell'inizio del corpo dell'e-mail (opzionale)."
+msgid "Text to be placed before the beginning of e-mail text (optional)."
+msgstr "Testo da posizionare prima dell'inizio del testo dell'e-mail (opzionale)."
 
 #: config_form.php:39
 msgid "Text Footer"
 msgstr "Pié di pagina Testo"
 
 #: config_form.php:43
-msgid "Text to be placed after the end of e-mail body (optional)."
-msgstr "Testo da posizione dopo la fine del corpo dell'e-mail (opzionale)."
+msgid "Text to be placed after the end of e-mail text (optional)."
+msgstr "Testo da posizionare dopo la fine del testo dell'e-mail (opzionale)."
 
 #: config_form.php:51
 msgid "Use HTML"
 msgstr "Usa HTML"
 
 #: config_form.php:55
-msgid "If checked, HTML code will be allowed for e-mail text."
-msgstr "Se selezionato, il codice HTML sarà ammesso nel testo dell'e-mail."
+msgid "If checked, HTML code will be allowed in e-mail text."
+msgstr "Se selezionato, codice HTML potrà essere utilizzato nel testo dell'e-mail."
 
 #: IndexController.php:53
 msgid "A subject must be supplied for the e-mail."
@@ -73,20 +73,20 @@ msgstr "Deve essere fornito un testo per l'e-mail."
 msgid "The e-mail text must be at least 10 characters long."
 msgstr "Il testo dell'e-mail deve essere lungo almeno 10 caratteri."
 
-#: IndexController.php:129
+#: IndexController.php:133
 msgid "The new e-mail was succesfully sent to one recipient."
 msgid_plural "The new e-mail was succesfully sent to %s recipients."
 msgstr[0] "La nuova e-mail è stata inviata con successo ad un destinatario."
-msgstr[1] "La nuova e-mail è stata inviata con sucesso a %s destinatari."
+msgstr[1] "La nuova e-mail è stata inviata con successo a %s destinatari."
 
 #: browse.php:4
 msgid "E-mail Users | Browse"
-msgstr "Contatta utenti | Sfoglia"
+msgstr "E-mail utenti | Sfoglia"
 
 #: browse.php:13
 #: browse.php:15
-msgid "Send a new e-mail"
-msgstr "Invia una nuova e-mail"
+msgid "Send new e-mail"
+msgstr "Invia nuova e-mail"
 
 #: browse.php:15
 msgid "No e-mail message has been sent yet."
@@ -111,27 +111,39 @@ msgid "Recipients"
 msgstr "Destinatari"
 
 #: browse.php:27
+msgid "Type"
+msgstr "Tipo"
+
+#: browse.php:28
 #: show.php:30
 msgid "Priority"
 msgstr "Priorità"
 
-#: browse.php:28
+#: browse.php:29
 msgid "Datetime sent"
 msgstr "Data invio"
 
-#: browse.php:52
+#: browse.php:53
+msgid "HTML"
+msgstr "HTML"
+
+#: browse.php:53
+msgid "Text"
+msgstr "Testo"
+
+#: browse.php:54
 #: send.php:33
 msgid "High"
 msgstr "Alta"
 
-#: browse.php:52
+#: browse.php:54
 #: send.php:33
 msgid "Normal"
 msgstr "Normale"
 
 #: send.php:4
-msgid "E-mail Users | Send a new e-mail"
-msgstr "Contatta utenti | Invia una nuova e-mail"
+msgid "E-mail Users | Send new e-mail"
+msgstr "E-mail utenti | Invia nuova e-mail"
 
 #: send.php:39
 #: show.php:46
@@ -153,7 +165,7 @@ msgstr "Alta priorità"
 
 #: show.php:2
 msgid "E-mail Users | Show e-mail #%s"
-msgstr "Contatta utenti | Mostra e-mail #%s"
+msgstr "E-mail utenti | Mostra e-mail #%s"
 
 #: show.php:5
 #: show.php:7
@@ -161,8 +173,8 @@ msgid "Browse e-mail"
 msgstr "Sfoglia e-mail"
 
 #: show.php:7
-msgid "Here's e-mail message #%s."
-msgstr "Ecco il messaggio e-mail #%s."
+msgid "Here's e-mail #%s."
+msgstr "Ecco l'e-mail #%s."
 
 #: show.php:11
 msgid "Sent on"

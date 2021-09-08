@@ -28,7 +28,7 @@
 	</div>
 	<div class="inputs five columns omega">
 		<p class="explanation">
-			<?php echo __('Text to be placed before the beginning of e-mail body (optional).'); ?>
+			<?php echo __('Text to be placed before the beginning of e-mail text (optional).'); ?>
 		</p>
 		<?php echo $view->formTextarea('email_users_composition_header', get_option('email_users_composition_header'), array('rows' => '10', 'cols' => '60', 'class' => array('html-editor'))); ?>
 	</div>
@@ -40,7 +40,7 @@
 	</div>
 	<div class="inputs five columns omega">
 		<p class="explanation">
-			<?php echo __('Text to be placed after the end of e-mail body (optional).'); ?>
+			<?php echo __('Text to be placed after the end of e-mail text (optional).'); ?>
 		</p>
 		<?php echo $view->formTextarea('email_users_composition_footer', get_option('email_users_composition_footer'), array('rows' => '10', 'cols' => '60', 'class' => array('html-editor'))); ?>
 	</div>

@@ -30,4 +30,25 @@ class EmailUsersMessage extends Omeka_Record_AbstractRecord implements Zend_Acl_
 	{
 		return 'EmailUsers_Message';
 	}
+	
+	public function getRecipientsCount($message_id)
+	{
+		if ($message_id == '') return false;
+		$db = get_db();
+		$sql = "SELECT * FROM {$db->EmailUsersRecipient} WHERE message_id = " . $message_id;
+		return $db->query($sql)->rowCount();		
+	}
+	
+	public function getRecipientRolesCount($message_id)
+	{
+		if ($message_id == '') return false;
+		$db = get_db();
+		$recipientRolesCount = array();
+		$sql = "SELECT role, COUNT(*) as total FROM {$db->EmailUsersRecipient} WHERE message_id = " . $message_id . " GROUP BY role";
+		$rows = $db->fetchAll($sql);
+		foreach ($rows as $row) {
+			$recipientRolesCount[] = __(ucfirst($row['role'])) . " (" . $row['total'] . ")";
+		}
+		return implode(', ', $recipientRolesCount);
+	}
 }

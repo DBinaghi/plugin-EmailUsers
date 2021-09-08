@@ -64,7 +64,6 @@ class EmailUsersPlugin extends Omeka_Plugin_AbstractPlugin
 		set_option('email_users_composition_use_html', '1');
 	}
 
-
     /**
      * Uninstall the plugin.
      */
@@ -101,8 +100,6 @@ class EmailUsersPlugin extends Omeka_Plugin_AbstractPlugin
         $acl->add($indexResource);
 
         $acl->allow(array('super', 'admin'), array('EmailUsers_Index'));
-        // $acl->allow(null, 'SimplePages_Page', 'show');
-        // $acl->deny(null, 'SimplePages_Page', 'show-unpublished');
     }
 
 	/**

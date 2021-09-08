@@ -1,4 +1,4 @@
-# Email Users
+# E-mail Users
 
 ## Description
 

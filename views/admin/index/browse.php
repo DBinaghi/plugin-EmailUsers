@@ -24,6 +24,7 @@ echo head($head);
 							__('Subject') => 'subject',
 							__('Sender') => 'sender',							
 							__('Recipients') => 'recipients',							
+							__('Type') => 'type',
 							__('Priority') => 'priority',
 							__('Datetime sent') => 'datetime_sent'
 						),
@@ -48,7 +49,8 @@ echo head($head);
 						echo $user->name;
 					?>
 				</td>
-				<td><?php echo "&nbsp;"; ?></td>
+				<td><?php echo $emailUsersMessage->getRecipientsCount($emailUsersMessage->id); ?></td>
+				<td><?php echo ($emailUsersMessage->html == 1 ? __('HTML') : __('Text')); ?></td>
 				<td><?php echo ($emailUsersMessage->priority == 1 ? __('High') : __('Normal')); ?></td>
 				<td><?php echo html_escape($emailUsersMessage->datetime_sent); ?></td>
 			</tr>

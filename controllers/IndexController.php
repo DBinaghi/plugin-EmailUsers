@@ -113,21 +113,24 @@ class EmailUsers_IndexController extends Omeka_Controller_AbstractActionControll
 			}
 			// Set datetime
 			$message->datetime_sent = date('Y-m-d H:i:s');
+			
+			// Save message to db
+			$message->save();
+			
+			// Retrieve id of message just saved
+			$message_id = $this->getMessageIdByDatetime($message->datetime_sent);
 
 			// Send message
 			foreach ($recipients as $recipient) {
 				$email->addTo($recipient->email, $recipient->name);
 				$email->send();
 				$email->clearRecipients();
+				$this->saveMessageRecipient($message_id, $recipient->id, $recipient->role);
 			}
-			
-			// Save message to db
-			$message->save();
-			
+
 			// Redirect to browse
 			$this->_helper->flashMessenger(__(plural('The new e-mail was succesfully sent to one recipient.', 'The new e-mail was succesfully sent to %s recipients.', count($recipients)), count($recipients)), 'success');
 			$this->_helper->redirector('browse');
-			// return;
 		}
 	}
 	
@@ -139,5 +142,20 @@ class EmailUsers_IndexController extends Omeka_Controller_AbstractActionControll
 
 		// Set the message object to the view.
 		$this->view->email_users_message = $message;
+	}
+	
+	public function getMessageIdByDatetime($datetime)
+	{
+		$message = $this->_helper->db->getTable('EmailUsersMessage')->findBy(array('datetime_sent' => $datetime));
+		if (!is_null($message)) return $message[0]['id'];
+	}
+	
+	public function saveMessageRecipient($message_id, $recipient_id, $role)
+	{
+		if ($message_id == '' || $recipient_id == '' || $role == '') return false;
+		$db = get_db();
+		$sql = "INSERT INTO {$db->EmailUsersRecipient} VALUES (" . $message_id . ", " . $recipient_id . ", '" . $role . "')";
+		$db->query($sql);
+		return true;
 	}
 }

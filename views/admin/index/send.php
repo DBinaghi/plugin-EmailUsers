@@ -1,7 +1,7 @@
 <?php 
 	queue_js_file('vendor/tinymce/tinymce.min');
 	queue_js_file('email-users-wysiwyg');
-	echo head(array('title' => __('E-mail Users | Send a new e-mail'), 'bodyclass' => 'email_users'));
+	echo head(array('title' => __('E-mail Users | Send new e-mail'), 'bodyclass' => 'email_users'));
 ?>
 
 <?php echo flash(); ?>
@@ -36,7 +36,7 @@
 		</div>
 		<div class="field">
 			<div class="two columns alpha">
-				<label><?php echo __('E-mail subject')?></label>	
+				<label><?php echo __('E-mail Subject')?></label>	
 			</div>
 			<div class="inputs five columns omega">
 				<div class="input-block">		
@@ -48,7 +48,7 @@
 		</div>
 		<div class="field">
 			<div class="two columns alpha">
-				<label><?php echo __('E-mail text')?></label>	
+				<label><?php echo __('E-mail Text')?></label>	
 			</div>
 			<div class="inputs five columns omega">
 				<div class="input-block">		

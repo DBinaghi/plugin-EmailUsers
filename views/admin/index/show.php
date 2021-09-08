@@ -30,7 +30,7 @@
 		<label><?php echo __('Priority')?></label>	
 	</div>
 	<div class="inputs eight columns omega">
-		<?php echo ($email_users_message->priority == 1 ? 'High' : 'Normal'); ?>
+		<?php echo ($email_users_message->priority == 1 ? __('High') : __('Normal')); ?>
 	</div>
 </div>
 <div class="field">
@@ -38,12 +38,12 @@
 		<label><?php echo __('Recipients')?></label>	
 	</div>
 	<div class="inputs eight columns omega">
-		<?php echo '&nbsp;'; ?>
+		<?php echo $email_users_message->getRecipientRolesCount($email_users_message->id); ?>
 	</div>
 </div>
 <div class="field">
 	<div class="two columns alpha">
-		<label><?php echo __('E-mail subject')?></label>	
+		<label><?php echo __('E-mail Subject')?></label>	
 	</div>
 	<div class="inputs eight columns omega">
 		<?php echo $email_users_message->subject; ?>
@@ -51,7 +51,7 @@
 </div>
 <div class="field">
 	<div class="two columns alpha">
-		<label><?php echo __('E-mail text')?></label>	
+		<label><?php echo __('E-mail Text')?></label>	
 	</div>
 	<div class="inputs eight columns omega">
 		<?php echo $email_users_message->text; ?>

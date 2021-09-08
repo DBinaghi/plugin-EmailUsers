@@ -12,4 +12,7 @@ Uncompress files and rename plugin folder "EmailUsers".
 Then install it like any other Omeka plugin.
 
 ## Licence
-MIT Licence, please credit [Daniele Binaghi](https://github.com/DBinaghi).
+GNU General Public License v3.0
+
+## Copyright
+Copyright [Daniele Binaghi](https://github.com/DBinaghi), 2021

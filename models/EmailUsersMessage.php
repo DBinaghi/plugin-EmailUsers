@@ -18,13 +18,14 @@ class EmailUsersMessage extends Omeka_Record_AbstractRecord implements Zend_Acl_
 	public $text;
 	public $html;
 	public $priority;
-	public $datetime_sent;
+	public $created;
+	public $sent;
 
-    public function getRecordUrl($action = 'show')
-    {
-        return array('module' => 'email-users', 'controller' => 'index', 
-                     'action' => $action, 'id' => $this->id);
-    }
+	public function getRecordUrl($action = 'show')
+	{
+		return array('module' => 'email-users', 'controller' => 'index', 
+					 'action' => $action, 'id' => $this->id);
+	}
 
 	public function getResourceId()
 	{

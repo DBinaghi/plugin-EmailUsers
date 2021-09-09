@@ -14,7 +14,7 @@ echo head($head);
 <?php if (!has_loop_records('email_users_message')): ?>
     <p><?php echo __('No e-mail message has been created or sent yet.'); ?> <a href="<?php echo html_escape(url('email-users/index/edit')); ?>"><?php echo __('Compose new e-mail'); ?></a>.</p>
 <?php else: ?>
-	<p><?php echo __('Here are all e-mail messages already created and/or sent to users of this site. If a message has not been sent, click on <b>Edit</b> button to edit and send it. Click on the message <b>Subject</b> to see all details of that message.'); ?></p>
+	<p><?php echo __('Here are all e-mail messages already created and/or sent to users of this site. If a message has not been sent, click on <b>Edit</b> button to edit and send it. Click on a message <b>Subject</b> to see all details of that message.'); ?></p>
 	<table class="full">
 		<thead>
 			<tr>

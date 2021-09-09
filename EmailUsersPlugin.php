@@ -42,7 +42,8 @@ class EmailUsersPlugin extends Omeka_Plugin_AbstractPlugin
 				`text` BLOB NOT NULL,
 				`html` TINYINT(1),
 				`priority` TINYINT(1),
-				`datetime_sent` DATETIME NOT NULL,
+				`created` DATETIME NOT NULL,
+				`sent` DATETIME,
 				PRIMARY KEY (`id`)
 			) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin
         ";

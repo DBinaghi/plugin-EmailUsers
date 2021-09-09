@@ -7,7 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: E-mail Users\n"
 "Report-Msgid-Bugs-To: https://github.com/DBinaghi/plugin-EmailUsers/issues\n"
-"POT-Creation-Date: 2021-09-07 19:15-0000\n"
+"POT-Creation-Date: 2021-09-07 19:15-0001\n"
+"PO-Revision-Date: 2021-09-09 22:07-0001\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -57,27 +58,31 @@ msgstr ""
 msgid "If checked, HTML code will be allowed for e-mail text."
 msgstr ""
 
-#: IndexController.php:53
-msgid "A subject must be supplied for the e-mail."
+#: IndexController.php:86
+msgid "The draft was succesfully saved. You'll be able to edit or send it at any time."
 msgstr ""
 
-#: IndexController.php:56
-msgid "The e-mail subject must be no longer than 255 characters."
-msgstr ""
-
-#: IndexController.php:60
-msgid "A text must be supplied for the e-mail."
-msgstr ""
-
-#: IndexController.php:63
-msgid "The e-mail text must be at least 10 characters long."
-msgstr ""
-
-#: IndexController.php:133
+#: IndexController.php:148
 msgid "The new e-mail was succesfully sent to one recipient."
 msgid_plural "The new e-mail was succesfully sent to %s recipients."
 msgstr[0] ""
 msgstr[1] ""
+
+#: IndexController.php:196
+msgid "A subject must be supplied for the e-mail."
+msgstr ""
+
+#: IndexController.php:198
+msgid "The e-mail subject must be no longer than 255 characters."
+msgstr ""
+
+#: IndexController.php:201
+msgid "A text must be supplied for the e-mail."
+msgstr ""
+
+#: IndexController.php:203
+msgid "The e-mail text must be at least 10 characters long."
+msgstr ""
 
 #: browse.php:4
 msgid "E-mail Users | Browse"
@@ -85,15 +90,18 @@ msgstr ""
 
 #: browse.php:13
 #: browse.php:15
-msgid "Send a new e-mail"
+msgid "Compose e-mail"
 msgstr ""
 
 #: browse.php:15
-msgid "No e-mail message has been sent yet."
+msgid "No e-mail message has been created or sent yet."
 msgstr ""
 
 #: browse.php:17
-msgid "Here are the e-mail messages already sent to users of this site."
+msgid ""
+"Here are all e-mail messages already created and/or sent to users of this site. If a "
+"message has not been sent, click on <b>Edit</b> button to edit and send it. Click on "
+"the message <b>Subject</b> to see all details of that message."
 msgstr ""
 
 #: browse.php:24
@@ -101,13 +109,11 @@ msgid "Subject"
 msgstr ""
 
 #: browse.php:25
-msgid "Sender"
+msgid "Creator"
 msgstr ""
 
 #: browse.php:26
-#: send.php:13
-#: show.php:38
-msgid "Recipients"
+msgid "Created"
 msgstr ""
 
 #: browse.php:27
@@ -115,51 +121,89 @@ msgid "Type"
 msgstr ""
 
 #: browse.php:28
-#: show.php:30
+#: show.php:49
 msgid "Priority"
 msgstr ""
 
 #: browse.php:29
-msgid "Datetime sent"
+#: edit.php:29
+#: show.php:57
+msgid "Recipients"
 msgstr ""
 
-#: browse.php:53
+#: browse.php:30
+msgid "Sent"
+msgstr ""
+
+#: browse.php:54
 msgid "HTML"
 msgstr ""
 
-#: browse.php:53
+#: browse.php:54
 msgid "Text"
 msgstr ""
 
-#: browse.php:54
-#: send.php:33
+#: browse.php:55
+#: edit.php:33
 msgid "High"
 msgstr ""
 
-#: browse.php:54
-#: send.php:33
+#: browse.php:55
+#: edit.php:33
 msgid "Normal"
 msgstr ""
 
-#: send.php:4
-msgid "E-mail Users | Send new e-mail"
+#: browse.php:64
+msgid "Edit"
 msgstr ""
 
-#: send.php:39
-#: show.php:46
+#: edit.php:5
+msgid "E-mail Users | Edit e-mail #%s"
+msgstr ""
+
+#: edit.php:7
+msgid "E-mail Users | Compose new e-mail"
+msgstr ""
+
+#: edit.php:19
+msgid "In this page you can edit details of an existing e-mail"
+msgstr ""
+
+#: edit.php:21
+msgid "In this page you can compose a new e-mail"
+msgstr ""
+
+#: edit.php:23
+msgid ""
+"; please remember that both <b>Subject</b> and <b>Text</b> fields are mandatory, "
+"and that <b>Super</b> and <b>Admin</b> roles will receive by default a copy of the "
+"e-mail. If you so wish, you can always save the details as a draft and edit/send "
+"them at a later time."
+msgstr ""
+
+#: edit.php:55
+#: show.php:67
 msgid "E-mail Subject"
 msgstr ""
 
-#: send.php:51
-#: show.php:54
+#: edit.php:67
+#: show.php:75
 msgid "E-mail Text"
 msgstr ""
 
-#: send.php:68
+#: edit.php:84
 msgid "Send e-mail"
 msgstr ""
 
-#: send.php:71
+#: edit.php:85
+msgid "Save as draft"
+msgstr ""
+
+#: edit.php:86
+msgid "Cancel"
+msgstr ""
+
+#: edit.php:89
 msgid "High priority"
 msgstr ""
 
@@ -168,18 +212,35 @@ msgid "E-mail Users | Show e-mail #%s"
 msgstr ""
 
 #: show.php:5
-#: show.php:7
+#: show.php:15
 msgid "Browse e-mail"
 msgstr ""
 
-#: show.php:7
+#: show.php:8
+#: show.php:16
+msgid "Edit this e-mail"
+msgstr ""
+
+#: show.php:13
 msgid "Here's e-mail message #%s."
 msgstr ""
 
-#: show.php:11
-msgid "Sent on"
+#: show.php:16
+msgid "or"
 msgstr ""
 
-#: show.php:19
-msgid "Sent by"
+#: show.php:13
+msgid "Here's e-mail message #%s."
+msgstr ""
+
+#: show.php:23
+msgid "Creator"
+msgstr ""
+
+#: show.php:34
+msgid "Created on"
+msgstr ""
+
+#: show.php:41
+msgid "Sent on"
 msgstr ""

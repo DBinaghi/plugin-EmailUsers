@@ -112,17 +112,19 @@ class EmailUsers_IndexController extends Omeka_Controller_AbstractActionControll
 				$message->html = false;
 			}
 			// Set datetime
-			$message->datetime_sent = date('Y-m-d H:i:s');
+			$message->created = date('Y-m-d H:i:s');
+			$message->sent = $message->created;
 			
 			// Save message to db
 			$message->save();
 			
 			// Retrieve id of message just saved
-			$message_id = $this->getMessageIdByDatetime($message->datetime_sent);
+			$message_id = $this->getMessageIdByDatetime($message->created);
 
 			// Send message
 			foreach ($recipients as $recipient) {
 				$email->addTo($recipient->email, $recipient->name);
+				// $email->addTo('admin@bitoteko.it', $recipient->name);
 				$email->send();
 				$email->clearRecipients();
 				$this->saveMessageRecipient($message_id, $recipient->id, $recipient->role);
@@ -134,6 +136,16 @@ class EmailUsers_IndexController extends Omeka_Controller_AbstractActionControll
 		}
 	}
 	
+	public function editAction()
+	{
+		// Get the page object from the passed ID.
+		$messageId = $this->_getParam('id');
+		$message = $this->_helper->db->getTable('EmailUsersMessage')->find($messageId);
+
+		// Set the message object to the view.
+		$this->view->email_users_message = $message;
+	}
+
 	public function showAction()
 	{
 		// Get the page object from the passed ID.
@@ -146,7 +158,7 @@ class EmailUsers_IndexController extends Omeka_Controller_AbstractActionControll
 	
 	public function getMessageIdByDatetime($datetime)
 	{
-		$message = $this->_helper->db->getTable('EmailUsersMessage')->findBy(array('datetime_sent' => $datetime));
+		$message = $this->_helper->db->getTable('EmailUsersMessage')->findBy(array('created' => $datetime));
 		if (!is_null($message)) return $message[0]['id'];
 	}
 	

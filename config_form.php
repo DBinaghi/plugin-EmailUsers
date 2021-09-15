@@ -57,3 +57,17 @@
 		<?php echo $view->formCheckbox('email_users_composition_use_html', get_option('email_users_composition_use_html'), null, array('1', '0')); ?>
 	</div>
 </div>
+
+<h2><?php echo __('E-mail details'); ?></h2>
+
+<div class="field">
+	<div class="two columns alpha">
+		<?php echo $view->formLabel('email_users_recipient_count_verbose', __('Recipients Count Verbose')); ?>
+	</div>
+	<div class="inputs five columns omega">
+		<p class="explanation">
+			<?php echo __('If checked, information about recipients in Show page will include more details.'); ?>
+		</p>
+		<?php echo $view->formCheckbox('email_users_recipient_count_verbose', get_option('email_users_recipient_count_verbose'), null, array('1', '0')); ?>
+	</div>
+</div>

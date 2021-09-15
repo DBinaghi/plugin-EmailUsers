@@ -9,6 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://github.com/DBinaghi/plugin-EmailUsers/issues\n"
 "POT-Creation-Date: 2021-09-07 19:15-0000\n"
 "PO-Revision-Date: 2021-09-09 22:07-0001\n"
+"PO-Revision-Date: 2021-09-15 11:44-0001\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Daniele Binaghi <admin@bitoteko.it>\n"
 "Language-Team: Italian <LL@li.org>\n"
@@ -56,7 +57,19 @@ msgstr "Usa HTML"
 
 #: config_form.php:55
 msgid "If checked, HTML code will be allowed for e-mail text."
-msgstr "Se selezionato, codice HTML potrà essere utilizzato nel testo dell'e-mail."
+msgstr "Se selezionata, codice HTML potrà essere utilizzato nel testo dell'e-mail."
+
+#: config_form.php:61
+msgid "E-mail details"
+msgstr "Dettagli e-mail"
+
+#: config_form.php:65
+msgid "Recipients Count Verbose"
+msgstr "Conto Destinatari Dettagliato"
+
+#: config_form.php:69
+msgid "If checked, information about recipients in Show page will include more details."
+msgstr "Se selezionata, le informazioni sui destinatari nella pagina Mostra includeranno maggiori dettagli."
 
 #: IndexController.php:86
 msgid "The draft was succesfully saved. You'll be able to edit or send it at any time."

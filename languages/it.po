@@ -55,7 +55,7 @@ msgid "Use HTML"
 msgstr "Usa HTML"
 
 #: config_form.php:55
-msgid "If checked, HTML code will be allowed in e-mail text."
+msgid "If checked, HTML code will be allowed for e-mail text."
 msgstr "Se selezionato, codice HTML potrà essere utilizzato nel testo dell'e-mail."
 
 #: IndexController.php:86

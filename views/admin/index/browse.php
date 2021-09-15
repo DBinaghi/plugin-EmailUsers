@@ -38,11 +38,9 @@ echo head($head);
 		<?php foreach (loop('email_users_message') as $emailUsersMessage): ?>
 			<tr>
 				<td class="centred-left">
-					<span class="title">
-						<a href="<?php echo html_escape(record_url('email_users_message', 'show')); ?>">
-							<?php echo $emailUsersMessage->subject; ?>
-						</a>
-					</span>
+					<a href="<?php echo html_escape(record_url('email_users_message', 'show')); ?>">
+						<?php echo $emailUsersMessage->subject; ?>
+					</a>
 				</td>
 				<td class="centred">
 					<?php 

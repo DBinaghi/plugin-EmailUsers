@@ -9,6 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://github.com/DBinaghi/plugin-EmailUsers/issues\n"
 "POT-Creation-Date: 2021-09-07 19:15-0001\n"
 "PO-Revision-Date: 2021-09-09 22:07-0001\n"
+"PO-Revision-Date: 2021-09-15 11:44-0001\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -56,6 +57,18 @@ msgstr ""
 
 #: config_form.php:55
 msgid "If checked, HTML code will be allowed for e-mail text."
+msgstr ""
+
+#: config_form.php:61
+msgid "E-mail details"
+msgstr ""
+
+#: config_form.php:65
+msgid "Recipients Count Verbose"
+msgstr ""
+
+#: config_form.php:69
+msgid "If checked, information about recipients in Show page will include more details."
 msgstr ""
 
 #: IndexController.php:86

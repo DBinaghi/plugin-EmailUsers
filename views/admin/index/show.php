@@ -58,7 +58,7 @@
 	</div>
 	<div class="inputs eight columns omega">
 		<?php 
-			echo ($email_users_message->sent != '' ? $email_users_message->getRecipientRolesCount($email_users_message->id) : '&nbsp;'); 
+			echo ($email_users_message->sent != '' ? $email_users_message->getRecipientRolesCount($email_users_message->id, get_option('email_users_recipient_count_verbose')) : '&nbsp;'); 
 		?>
 	</div>
 </div>

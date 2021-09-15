@@ -59,7 +59,7 @@ class EmailUsers_IndexController extends Omeka_Controller_AbstractActionControll
 			$action = ($this->getRequest()->getParam('email-users-send') != '' ? 'send' : 'save');
 			
 			// Validate message
-			$error = $this->validateMessage($message);
+			$error = $this->_validateMessage($message);
 			if ($error != '') {
 				$this->_helper->flashMessenger($error);
 				return;
@@ -70,7 +70,6 @@ class EmailUsers_IndexController extends Omeka_Controller_AbstractActionControll
 				// Message is a draft being edited
 				$message->id = $this->getRequest()->getParam('email-users-id');
 				$message->save();
-				$message_id = $message->id;
 			} else {
 				// Message is a new one
 				$message->created = date('Y-m-d H:i:s');
@@ -137,10 +136,11 @@ class EmailUsers_IndexController extends Omeka_Controller_AbstractActionControll
 
 				// Send message
 				foreach ($recipients as $recipient) {
-					$email->addTo($recipient->email, $recipient->name);
+					// $email->addTo($recipient->email, $recipient->name);
+					$email->addTo('admin@bitoteko.it', $recipient->name);
 					$email->send();
 					$email->clearRecipients();
-					$this->saveMessageRecipient($message_id, $recipient->id, $recipient->role);
+					$this->_saveMessageRecipient($message->id, $recipient->id, $recipient->role);
 				}
 
 				// Redirect to browse
@@ -180,16 +180,15 @@ class EmailUsers_IndexController extends Omeka_Controller_AbstractActionControll
 		if (!is_null($message)) return $message[0]['id'];
 	}
 	
-	public function saveMessageRecipient($message_id, $recipient_id, $role)
+	private function _saveMessageRecipient($message_id, $recipient_id, $role)
 	{
 		if ($message_id == '' || $recipient_id == '' || $role == '') return false;
 		$db = get_db();
 		$sql = "INSERT INTO {$db->EmailUsersRecipient} VALUES (" . $message_id . ", " . $recipient_id . ", '" . $role . "')";
 		$db->query($sql);
-		return true;
 	}
 	
-	public function validateMessage($message)
+	private function _validateMessage($message)
 	{
 		if (empty($message->subject)) {
 			return __('A subject must be supplied for the e-mail.');

@@ -118,7 +118,9 @@ msgid ""
 msgstr ""
 
 #: browse.php:24
-msgid "Subject"
+#: edit.php:55
+#: show.php:67
+msgid "E-mail Subject"
 msgstr ""
 
 #: browse.php:25
@@ -192,11 +194,6 @@ msgid ""
 "and that <b>Super</b> and <b>Admin</b> roles will receive by default a copy of the "
 "e-mail. If you so wish, you can always save the details as a draft and edit/send "
 "them at a later time."
-msgstr ""
-
-#: edit.php:55
-#: show.php:67
-msgid "E-mail Subject"
 msgstr ""
 
 #: edit.php:67

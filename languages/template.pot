@@ -235,15 +235,11 @@ msgid "Edit this e-mail"
 msgstr ""
 
 #: show.php:13
-msgid "Here's e-mail message #%s."
+msgid "Here are the details of e-mail #%s."
 msgstr ""
 
 #: show.php:16
 msgid "or"
-msgstr ""
-
-#: show.php:13
-msgid "Here's e-mail message #%s."
 msgstr ""
 
 #: show.php:23

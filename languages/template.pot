@@ -90,7 +90,7 @@ msgstr ""
 
 #: browse.php:13
 #: browse.php:15
-msgid "Compose e-mail"
+msgid "Compose new e-mail"
 msgstr ""
 
 #: browse.php:15

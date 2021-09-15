@@ -1,12 +1,14 @@
 <?php
-queue_css_file('email-users');
-$head = array('bodyclass' => 'email-users browse',
-              'title' => html_escape(__('E-mail Users | Browse')),
-              'content_class' => 'horizontal-nav');
-if (isset($_GET['view'])) {
-	$active = $_GET['view'];
-}
-echo head($head);
+	queue_css_file('email-users');
+	$head = array(
+		'bodyclass' => 'email-users browse',
+		'title' => html_escape(__('E-mail Users | Browse')),
+		'content_class' => 'horizontal-nav'
+	);
+	if (isset($_GET['view'])) {
+		$active = $_GET['view'];
+	}
+	echo head($head);
 ?>
 <?php echo flash(); ?>
 

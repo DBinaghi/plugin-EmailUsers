@@ -243,8 +243,8 @@ msgid "Edit this e-mail"
 msgstr "Modifica questa e-mail"
 
 #: show.php:13
-msgid "Here's e-mail message #%s."
-msgstr "Ecco il messaggio e-mail #%s."
+msgid "Here are the details of e-mail #%s."
+msgstr "Ecco i dettagli dell'e-mail #%s."
 
 #: show.php:16
 msgid "or"

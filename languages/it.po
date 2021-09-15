@@ -90,8 +90,8 @@ msgstr "E-mail utenti | Sfoglia"
 
 #: browse.php:13
 #: browse.php:15
-msgid "Compose e-mail"
-msgstr "Componi e-mail"
+msgid "Compose new e-mail"
+msgstr "Componi nuova e-mail"
 
 #: browse.php:15
 msgid "No e-mail message has been created or sent yet."

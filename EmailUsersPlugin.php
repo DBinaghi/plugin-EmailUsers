@@ -63,6 +63,7 @@ class EmailUsersPlugin extends Omeka_Plugin_AbstractPlugin
 		set_option('email_users_composition_header', '');
 		set_option('email_users_composition_footer', '');
 		set_option('email_users_composition_use_html', '1');
+		set_option('email_users_recipient_count_verbose', '0');
 	}
 
     /**
@@ -78,6 +79,7 @@ class EmailUsersPlugin extends Omeka_Plugin_AbstractPlugin
 		delete_option('email_users_composition_header');
 		delete_option('email_users_composition_footer');
 		delete_option('email_users_composition_use_html');
+		delete_option('email_users_recipient_count_verbose');
 	 }
 
     /**
@@ -121,6 +123,7 @@ class EmailUsersPlugin extends Omeka_Plugin_AbstractPlugin
 		set_option('email_users_composition_header', $post['email_users_composition_header']);
 		set_option('email_users_composition_footer', $post['email_users_composition_footer']);
 		set_option('email_users_composition_use_html', $post['email_users_composition_use_html']);
+		set_option('email_users_recipient_count_verbose', $post['email_users_recipient_count_verbose']);
 	}
 	
     /**
